@@ -21,12 +21,18 @@
     <body>
         <h1>Find the Puppy</h1>
         <div id ="instructions"></div>
-            <h2>Instructions</h2>
+            <p><b class="term">Instructions:</b> Use your mouse to click on one of three card choices. 
+                If the card you choose matches the puppy, then you win. 
+                If the card you choose does not match the puppy, then the computer takes a turn. 
+                If the computer chooses the matching card, then the computer wins. If you and 
+                the computer both do not pick the right card, then it is a draw.   </p>
             <small></small>
         </div>   
         <div class = "gameboard">
             <div id="match-card"></div>
-            <div id="card1"></div>
+            <div id="card1">
+                <img src= "https://imgur.com/egKCC8b">
+            </div>
             <div id="card2"></div>
             <div id="card3"></div>
             <div  class="status"></div>
@@ -37,7 +43,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <button></button>
+        <button>Play again</button>
         <script src="index.js" defer></script>
     </body>
 </html>

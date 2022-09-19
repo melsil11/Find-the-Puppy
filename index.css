@@ -4,11 +4,30 @@ body{
 
 h1{
     font-family: 'Dancing Script', cursive;
-    font-size: 70px;
+    font-size: 80px;
     position: relative;
     margin: auto;
+    text-align: center;
 }
 
-h2{
+p {
     font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
+}
+
+.gameboard{
+    height: 700px;
+    border: 5px solid 
+}
+
+
+button {
+    position: absolute;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    left: 45%;
+
 }
