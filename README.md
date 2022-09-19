@@ -15,10 +15,11 @@ As a user, I want to be notified of the outcome of the game.
 
 Wireframes 
 
-wireframe find the puppy.png
+wireframe.png
 https://github.com/melsil11/Find-the-Puppy/blob/main/images/wireframe%20find%20the%20puppy.png
 
-![](wireframe find the puppy.png)
+![wireframe](wireframe.png)
+
 
 
 Entity Relationship Diagrams
