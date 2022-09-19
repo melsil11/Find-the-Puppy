@@ -1,0 +1,14 @@
+body{
+   background-color: rgb(103, 207, 219); 
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    position: relative;
+    margin: auto;
+}
+
+h2{
+    font-family: 'Sarabun', sans-serif;
+}
