@@ -22,3 +22,9 @@ Entity Relationship Diagrams
 HTML-  divs, classes, Id’s, button
 CSS- google fonts, soft rounds edges, soft color scheme
 JavaScript- define player, computer, puppy match, choices array, math function for random, if else statements, event listeners for click 
+
+Schedule of how I am going to plan my week
+
+Start my planning out my html, deciding which divs and containers to use
+Next start css, the hard part, figure out how to get the ccontainers and divs placed.
+Next work on figuring out the JavaScript functions. 
