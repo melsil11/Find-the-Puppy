@@ -45,18 +45,23 @@ p {
    bottom: 225px;
 }
 
-#card1 {
+#faceCard1 {
     position: absolute;
     right: 300px;
 }
 
-#card2 {
+#faceCard2 {
     position: absolute;
-    /* justify-content: center; */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* object-position: center; */
+    /* right: 0; */
+    /* left: 10px; */
     
 }
 
-#card3 {
+#faceCard3 {
     position: absolute;
     left: 300px;
 }
