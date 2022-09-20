@@ -16,10 +16,50 @@ p {
 }
 
 .gameboard{
-    height: 700px;
-    border: 5px solid 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    min-height: 500px;
+    width: auto;
+    border: 5px solid;
+    padding: 20px; 
+    
 }
 
+#match-card{
+    position: absolute;
+    /* display: inline-block; */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 10%; */
+    /* margin: 20px 450px 10px 840px; */
+}
+    
+.cards {
+   position: absolute;
+   /* display: inline-block;  */
+   /* justify-content: center; */
+    /* object-position: bottom; */
+   bottom: 225px;
+}
+
+#card1 {
+    position: absolute;
+    right: 300px;
+}
+
+#card2 {
+    position: absolute;
+    /* justify-content: center; */
+    
+}
+
+#card3 {
+    position: absolute;
+    left: 300px;
+}
 
 button {
     position: absolute;
