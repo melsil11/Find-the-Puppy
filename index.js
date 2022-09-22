@@ -31,24 +31,31 @@ function shuffleArray(choices) {
     }
     for ( let i = choices.length -1; i > 0; i--) {
         if (choices[i] == 'faceCard1')   { 
-            const card1 = document.createElement('img');
-            card1.src = 'images/faceCard.jpeg';
+            const card1 = document.createElement('img')
+            card1.src = 'images/faceCard.jpeg'
             card1.style.width = '150px'
+            card1.alt = 'faceCard1'
             document.getElementsByClassName('cards')[0].appendChild(card1) 
-            console.log(document.getElementsByClassName('cards')[0])
+            console.log(document.getElementsByClassName('cards')[0]);
       
-        
-        // } else if {  // const card2 = document.createElement('img');
-        //     // card2.src = 'images/faceCard.jpeg';
-        //     // card2.style.width = '150px'
-        //     // document.getElementsByClassName('cards')[0].appendChild(card1) 
-        //     // console.log(document.getElementsByClassName('cards')[0])
+        } else if (choices[i] == 'faceCard2') {  
+            const card2 = document.createElement('img')
+            card2.src = 'images/faceCard.jpeg'
+            card2.style.width = '150px'
+            card2.alt = 'faceCard2'
+            document.getElementsByClassName('cards')[0].appendChild(card2) 
+            console.log(document.getElementsByClassName('cards')[0]);
 
-        }
+        } else (choices[i] == 'faceCard3'); {  
+            const card3 = document.createElement('img')
+            card3.src = 'images/faceCard.jpeg'
+            card3.style.width = '150px'
+            document.getElementsByClassName('cards')[0].appendChild(card3) 
+            console.log(document.getElementsByClassName('cards')[0]);
     }
-      console.log(choices);
+      console.log(choices)
   }
-
+}
   shuffleArray(choices);
 
 const matchCheck = (event) => {
