@@ -107,12 +107,13 @@ p {
    /* width: 50%; */
    height: 100%;
    /* margin-top: 20px; */
-   margin-right: 50%;
+   /* margin-right: 50px; */
    
    
 }
 
 .cards div{
+    display: flex;
     justify-content: center;
     /* width: auto; */
     width: 100%;
