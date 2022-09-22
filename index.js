@@ -79,23 +79,37 @@ const matchCheck = (event) => {
     let selection = event.target.id
     console.log('matchCheck, choices', choices)
     if (selection === 'faceCard1') {
-        result = 'match';
-       
+        result = document.getElementById("results").innerText='Congratulations, You Win! Press the button to play again.';
+    //    stop game
     } else  {
-        result = 'computers turn';
+        result = document.getElementById("results").innerText='Sorry, no match. It is the computers turn.';
     } 
     console.log('in matchCheck, result',result)
+    // remove the card choice from the array for computers turn
 }
-
-
-   
 
 
 function computerChooses() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     computer.currentChoice = choices[randomIndex];
+    console.log(randomIndex)
+
+    // if(computer.currentChoice === 'faceCard1'){
+    // result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game'
+// } else if{
+    // (computer.currentChoice === 'faceCard2')
+    // result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game'
+// } else if{
+    // (computer.currentChoice === 'faceCard3')
+    // result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game'
+
 }
-    
+// return computerChooses
+
+
+
+
+
    
 
 
