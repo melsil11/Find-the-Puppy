@@ -85,28 +85,38 @@ const matchCheck = (event) => {
         result = document.getElementById("results").innerText='Sorry, no match. It is the computers turn.';
     } 
     console.log('in matchCheck, result',result)
+    // const newChoices = choices.indexOf(selection)
+    choices.splice(choices.indexOf(selection),1)
+    console.log(choices)
+
     // remove the card choice from the array for computers turn
 }
 
 
 function computerChooses() {
+    
     const randomIndex = Math.floor(Math.random() * choices.length);
     computer.currentChoice = choices[randomIndex];
     console.log(randomIndex)
 
-    // if(computer.currentChoice === 'faceCard1'){
-    // result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game'
-// } else if{
-    // (computer.currentChoice === 'faceCard2')
-    // result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game'
-// } else if{
-    // (computer.currentChoice === 'faceCard3')
-    // result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game'
+}   
 
+function computerChoice(computer)  {
+
+    if(computer.currentChoice === 'faceCard1') {
+        result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game';
+    
+    } else if (computer.currentChoice === 'faceCard2'){
+     
+        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
+    
+    } else if  (computer.currentChoice === 'faceCard3'){
+       
+        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
+
+    }
 }
-// return computerChooses
-
-
+console.log('in computerChooses, result',computerChooses)
 
 
 
@@ -162,3 +172,22 @@ document.getElementById('faceCard3').addEventListener('click', matchCheck)
 //     } 
 //     console.log(result)
 //   };
+
+// function computerChooses() {
+//     const randomIndex = Math.floor(Math.random() * choices.length);
+//     computer.currentChoice = choices[randomIndex];
+//     console.log(randomIndex)
+//     if(computer.currentChoice === 'faceCard1') {
+//         result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game';
+    
+//     } else if {
+//         (computer.currentChoice === 'faceCard2')
+//         result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
+    
+//     } else {
+//         (computer.currentChoice === 'faceCard3')
+//         result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
+
+//     }
+// }
+// console.log('in computerChooses, result',computerChooses)
