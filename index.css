@@ -96,31 +96,21 @@ p {
 }
 
 
-
 .cards {
    display: flex;
-   /* position: absolute; */
    justify-content: center;
-   /* width: auto; */
-   /* padding: 100px; */
-   /* margin-top: 20px; */
-   /* width: 50%; */
    height: 100%;
-   /* margin-top: 20px; */
-   /* margin-right: 50px; */
-   
+   gap: 20px;
    
 }
-
+  
 .cards div{
     display: flex;
     justify-content: center;
-    /* width: auto; */
     width: 100%;
     height: 50%;
     padding: 10px;
     margin: 20px;
-    /* margin-left: 10%; */
     
 }
 
@@ -131,16 +121,19 @@ p {
   display: none;
 }
 
-h2 {
+#results {
   position: relative;
   justify-content: center;
-
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+  font-family: 'Dancing Script';
 
 }
 button {
     position: relative;
     /* margin: 20px; */
-    margin: 70px;
+    margin: 5px;
     height: 50px;
     width: 150px;
     font-size: 25px;
@@ -152,37 +145,3 @@ button {
 
   
 
-/* #faceCard1 {
-    display: flex;
-    position: absolute;
-    right: 300px;
-}
-
-#faceCard2 {
-    display: flex;
-    position: absolute;
-    /* justify-content: center; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    
-   
-   
-    
-/* } */
-
-/* #faceCard3 {
-    display: flex;
-    position: absolute;
-    left: 300px;
- } 
-
-button {
-    position: absolute;
-    margin: 20px;
-    height: 50px;
-    width: 150px;
-    font-size: 25px;
-    font-family: 'Dancing Script', cursive;
-    left: 45%;
-
-}
