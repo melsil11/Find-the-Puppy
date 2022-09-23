@@ -127,18 +127,11 @@ function computerChoice()  {
 }
 console.log('in computerChooses, result',computerChooses)
 
-
-
-   
-
-
-
-
 // these are the click event listeners for the player and will determin the outcome in the matchCheck function
 document.getElementById('faceCard1').addEventListener('click', matchCheck)
 document.getElementById('faceCard2').addEventListener('click', matchCheck)  
 document.getElementById('faceCard3').addEventListener('click', matchCheck)  
-
+// playAgain.addEventListener('click', handleRestartGame) 
 
 
 // //////original click event listeners that were used as models for new event listeners////
