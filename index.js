@@ -72,7 +72,7 @@ const matchCheck = (event) => {
     if (selection === 'faceCard1') {
         result = document.getElementById("results").innerText='Congratulations, You Win! Press the button to play again.';
         removeHandler()
-    //    need to stop game
+    //    need to stop game remove click events on facecards
     } else  {
         console.log('got here')
         playerTurn = false
@@ -85,8 +85,15 @@ const matchCheck = (event) => {
     choices.splice(choices.indexOf(selection),1)
     console.log(choices) 
     if (playerTurn === false) {
+        const myTimeout = setTimeout(computerChoice, 4000);
+        
+        // function myStopFunction() {
+        // clearTimeout(myTimeout);
+        // }
+        // myStopFunction()
+        
         computerChooses()
-        computerChoice()
+        // computerChoice()
        
     }
 
@@ -97,6 +104,11 @@ function removeHandler() {
     document.getElementById('faceCard2').removeEventListener('click', matchCheck);
     document.getElementById('faceCard3').removeEventListener('click', matchCheck);
 }
+
+
+
+
+
 
 // this function is where the computer selects a random choice 
 function computerChooses() {
@@ -125,13 +137,13 @@ function computerChoice()  {
 
     }
 }
-console.log('in computerChooses, result',computerChooses)
+// console.log('in computerChooses, result',computerChooses)
 
 // these are the click event listeners for the player and will determin the outcome in the matchCheck function
 document.getElementById('faceCard1').addEventListener('click', matchCheck)
 document.getElementById('faceCard2').addEventListener('click', matchCheck)  
 document.getElementById('faceCard3').addEventListener('click', matchCheck)  
-// playAgain.addEventListener('click', handleRestartGame) 
+
 
 
 // //////original click event listeners that were used as models for new event listeners////

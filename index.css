@@ -122,8 +122,13 @@ p {
     margin: 20px;
     /* margin-left: 10%; */
     
-  
-    
+}
+
+#card1{
+  display: none;
+}
+#card2{
+  display: none;
 }
 
 h2 {
