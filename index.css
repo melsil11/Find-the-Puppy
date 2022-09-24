@@ -80,22 +80,15 @@ p {
     
 }
 
-#match-card{
+#matchcard{
     display: flex;
-    /* position: absolute; */
-    /* display: inline-block; */
     justify-content: center;
-    /* margin-top: 20px; */
-    /* margin-left: 10%; */
-    /* align-content: center; */
     margin: auto;
     height: 100%;
     width: 100%;
-    /* margin-left: 900px; */
     padding: 10px;
-    /* margin: 20px 450px 10px 840px; */
-}
-
+    padding-left: 0px;
+  }
 
 .cards {
    display: flex;

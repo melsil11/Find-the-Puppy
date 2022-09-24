@@ -10,14 +10,17 @@ const computer = {
 }
 
 
-const matchCard = ['matchCard']
+
 // the array that will be shuffled and used to match the choices in the game///
 const choices = ['faceCard1', 'faceCard2', 'faceCard3'];
 
 // These are the two facecards that are not matches
 const fisher = document.getElementById('card1')
-
-
+const cheppy = document.getElementById('card2')
+const matchCard = document.getElementById('matchcard')
+console.log(matchcard) 
+console.log(card1)
+console.log(card2)
 // this function is based on fisher yates algorithm, it will shuffle the array
 // so that each game the cards are in a different order it also creates the cards and displays them
 function shuffleArray(choices) {
@@ -31,31 +34,31 @@ function shuffleArray(choices) {
     for ( let i = 0; i < choices.length; i++) {
         // used the shuffleArray function to create the face cards and ammend them to the html DOM
         if (choices[i] === 'faceCard1')   { 
-            const card1 = document.createElement('img')
+            const card1 = document.getElementById('faceCard1')
             card1.src = 'images/faceCard.jpeg'
-            card1.style.width = '150px'
-            card1.alt = 'faceCard1'
-            card1.id = 'faceCard1'
+            // card1.style.width = '150px'
+            // card1.alt = 'faceCard1'
+            // card1.id = 'faceCard1'
             document.getElementsByClassName('cards')[0].appendChild(card1) 
-            console.log('in shuffleArray conditional card1',document.getElementsByClassName('cards')[0]);
+            // console.log('in shuffleArray conditional card1',document.getElementsByClassName('cards')[0]);
       
         } else if (choices[i] === 'faceCard2') {  
-            const card2 = document.createElement('img')
+            const card2 = document.getElementById('faceCard2')
             card2.src = 'images/faceCard.jpeg'
             card2.style.width = '150px'
             card2.alt = 'faceCard2'
             card2.id = 'faceCard2'
             document.getElementsByClassName('cards')[0].appendChild(card2) 
-            console.log('in shuffleArray conditional card2',document.getElementsByClassName('cards')[0]);
+            // console.log('in shuffleArray conditional card2',document.getElementsByClassName('cards')[0]);
 
         } else  {  
-            const card3 = document.createElement('img')
+            const card3 = document.getElementById('faceCard3')
             card3.src = 'images/faceCard.jpeg'
             card3.style.width = '150px'
             card3.alt = 'faceCard3'
             card3.id = 'faceCard3'
             document.getElementsByClassName('cards')[0].appendChild(card3) 
-            console.log('in shuffleArray conditional card3',document.getElementsByClassName('cards')[0]);
+            // console.log('in shuffleArray conditional card3',document.getElementsByClassName('cards')[0]);
    
         }
     console.log('in shuffleArray, choices',choices)
@@ -65,6 +68,7 @@ function shuffleArray(choices) {
 }
 
 shuffleArray(choices);
+
 
 // this function creates the target event click and checks if it matched the match card. 
 let playerTurn = true
@@ -89,28 +93,18 @@ const matchCheck = (event) => {
     console.log(choices) 
     if (playerTurn === false) {
         const myTimeout = setTimeout(computerChoice, 4000);
-        
-        // function myStopFunction() {
-        // clearTimeout(myTimeout);
-        // }
-        // myStopFunction()
-        
         computerChooses()
-        // computerChoice()
-       
+             
     }
 
 }
+
 
 function removeHandler() {
     document.getElementById('faceCard1').removeEventListener('click', matchCheck);
     document.getElementById('faceCard2').removeEventListener('click', matchCheck);
     document.getElementById('faceCard3').removeEventListener('click', matchCheck);
 }
-
-
-
-
 
 
 // this function is where the computer selects a random choice 
@@ -152,8 +146,6 @@ const flip = document.querySelector('flip-scale-up-hor')
 // flipcard1.addEventListener('click' , e => {
     // document.querySelector(')
 // })
-
-
 
 
 
