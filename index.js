@@ -14,6 +14,9 @@ const matchCard = ['matchCard']
 // the array that will be shuffled and used to match the choices in the game///
 const choices = ['faceCard1', 'faceCard2', 'faceCard3'];
 
+// These are the two facecards that are not matches
+const fisher = document.getElementById('card1')
+
 
 // this function is based on fisher yates algorithm, it will shuffle the array
 // so that each game the cards are in a different order it also creates the cards and displays them
@@ -144,6 +147,14 @@ document.getElementById('faceCard1').addEventListener('click', matchCheck)
 document.getElementById('faceCard2').addEventListener('click', matchCheck)  
 document.getElementById('faceCard3').addEventListener('click', matchCheck)  
 
+let flipCard1 = document.getElementById('faceCard1')
+const flip = document.querySelector('flip-scale-up-hor')
+// flipcard1.addEventListener('click' , e => {
+    // document.querySelector(')
+// })
+
+
+
 
 
 // //////original click event listeners that were used as models for new event listeners////
@@ -157,8 +168,8 @@ document.getElementById('faceCard3').addEventListener('click', matchCheck)
 // const choice2 = document.createElement('div')
 //     choice2.setAttribute('id', 'fisher') 
 //     document.body.appendChild(choice2);
-    // const fisher = document.createElement('img');
-    // fisher.src = 'images/fisher.jpg';
-    // document.body.appendChild(fisher);
+//     const fisher = document.createElement('img');
+//     fisher.src = 'images/fisher.jpg';
+//     document.body.appendChild(fisher);
 
-    // choice2.appendChild(fisher)
+//     choice2.appendChild(fisher)
