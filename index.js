@@ -135,15 +135,15 @@ function computerChooses() {
 function computerChoice()  {
 
     if(computer.currentChoice === 'faceCard1') {
-        result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game';
+        result = document.getElementById("results").innerText='The Computer Wins. Press the play again button to restart the game', document.getElementById('faceCard1').src='images/bellaJPG.jpeg';
     
     } else if (computer.currentChoice === 'faceCard2'){
+        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game', document.getElementById('faceCard2').src='images/cheppy.JPG';
      
-        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
-    
+        
     } else if  (computer.currentChoice === 'faceCard3'){
+        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game', document.getElementById('faceCard3').src='images/fisher.jpg';
        
-        result = document.getElementById("results").innerText='No one matched the Card. It is a Draw. Press the play again button to restart the game';
 
     }
 }
