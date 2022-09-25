@@ -14,14 +14,6 @@ const computer = {
 // the array that will be shuffled and used to match the choices in the game///
 const choices = ['faceCard1', 'faceCard2', 'faceCard3'];
 
-// These are the two facecards that are not matches
-const fisher = document.getElementById('backcard1')
-const cheppy = document.getElementById('backcard2')
-const matchCard = document.getElementById('matchcard')
-console.log(matchcard) 
-console.log(backcard1)
-console.log(backcard2)
-
 
 // this function is based on fisher yates algorithm, it will shuffle the array
 // so that each game the cards are in a different order it also creates the cards and displays them
@@ -72,6 +64,7 @@ function shuffleArray(choices) {
 shuffleArray(choices);
 
 
+
 // this function creates the target event click and checks if it matched the match card. 
 let playerTurn = true
 const matchCheck = (event) => {
@@ -99,8 +92,24 @@ const matchCheck = (event) => {
              
     }
 
+   
 }
 
+// these functions change the image of the card the play clicked
+document.getElementById('faceCard1').addEventListener('click', changeImage)
+function changeImage() {
+    document.getElementById('faceCard1').src='images/bellaJPG.jpeg'
+}
+
+document.getElementById('faceCard2').addEventListener('click', changeImage2)
+function changeImage2() {
+    document.getElementById('faceCard2').src='images/cheppy.JPG'
+}
+
+document.getElementById('faceCard3').addEventListener('click', changeImage3)
+function changeImage3() {
+    document.getElementById('faceCard3').src='images/fisher.jpg'
+}
 
 function removeHandler() {
     document.getElementById('faceCard1').removeEventListener('click', matchCheck);
@@ -142,16 +151,6 @@ function computerChoice()  {
 document.getElementById('faceCard1').addEventListener('click', matchCheck)
 document.getElementById('faceCard2').addEventListener('click', matchCheck)  
 document.getElementById('faceCard3').addEventListener('click', matchCheck)  
-
-// did not work
-// const card = document.getElementById('faceCard1')
-// card.addEventListener('click', flipCard);
-
-// function flipCard(){
-//     card.classList.toggle('flipCard')
-// }
-// console.log(flipCard)
-
 
 
 

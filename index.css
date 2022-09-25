@@ -88,6 +88,7 @@ p {
     width: 100%;
     padding: 10px;
     padding-left: 0px;
+   
   }
 
 .cards {
@@ -97,8 +98,9 @@ p {
    gap: 30px;
    margin: auto;
    padding: 10px;
+   transition: transform 1s;
    transform-style: preserve-3d;
-   transition: all 0.8s ease;
+   /* cursor: pointer; */
 }
   
 .cards div{
@@ -112,16 +114,13 @@ p {
     
 }
 
-
 #backcard1{
-  /* display: none; */
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
+ display: none;
+
 }
+
 #backcard2{
-  /* display: none; */
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
+  display: none;
 }
 
 #results {
