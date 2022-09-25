@@ -99,7 +99,7 @@ const matchCheck = (event) => {
     choices.splice(choices.indexOf(selection),1)
     console.log(choices) 
     if (playerTurn === false) {
-        const myTimeout = setTimeout(computerChoice, 4000);
+        const myTimeout = setTimeout(computerChoice, 3000);
         computerChooses()
              
     }
