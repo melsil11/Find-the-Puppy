@@ -15,12 +15,14 @@ const computer = {
 const choices = ['faceCard1', 'faceCard2', 'faceCard3'];
 
 // These are the two facecards that are not matches
-const fisher = document.getElementById('card1')
-const cheppy = document.getElementById('card2')
+const fisher = document.getElementById('backcard1')
+const cheppy = document.getElementById('backcard2')
 const matchCard = document.getElementById('matchcard')
 console.log(matchcard) 
-console.log(card1)
-console.log(card2)
+console.log(backcard1)
+console.log(backcard2)
+
+
 // this function is based on fisher yates algorithm, it will shuffle the array
 // so that each game the cards are in a different order it also creates the cards and displays them
 function shuffleArray(choices) {
@@ -34,16 +36,16 @@ function shuffleArray(choices) {
     for ( let i = 0; i < choices.length; i++) {
         // used the shuffleArray function to create the face cards and ammend them to the html DOM
         if (choices[i] === 'faceCard1')   { 
-            const card1 = document.getElementById('faceCard1')
+            const card1 = document.createElement('img')
             card1.src = 'images/faceCard.jpeg'
-            // card1.style.width = '150px'
-            // card1.alt = 'faceCard1'
-            // card1.id = 'faceCard1'
+            card1.style.width = '150px'
+            card1.alt = 'faceCard1'
+            card1.id = 'faceCard1'
             document.getElementsByClassName('cards')[0].appendChild(card1) 
             // console.log('in shuffleArray conditional card1',document.getElementsByClassName('cards')[0]);
       
         } else if (choices[i] === 'faceCard2') {  
-            const card2 = document.getElementById('faceCard2')
+            const card2 = document.createElement('img')
             card2.src = 'images/faceCard.jpeg'
             card2.style.width = '150px'
             card2.alt = 'faceCard2'
@@ -52,7 +54,7 @@ function shuffleArray(choices) {
             // console.log('in shuffleArray conditional card2',document.getElementsByClassName('cards')[0]);
 
         } else  {  
-            const card3 = document.getElementById('faceCard3')
+            const card3 = document.createElement('img')
             card3.src = 'images/faceCard.jpeg'
             card3.style.width = '150px'
             card3.alt = 'faceCard3'
@@ -141,11 +143,16 @@ document.getElementById('faceCard1').addEventListener('click', matchCheck)
 document.getElementById('faceCard2').addEventListener('click', matchCheck)  
 document.getElementById('faceCard3').addEventListener('click', matchCheck)  
 
-let flipCard1 = document.getElementById('faceCard1')
-const flip = document.querySelector('flip-scale-up-hor')
-// flipcard1.addEventListener('click' , e => {
-    // document.querySelector(')
-// })
+// did not work
+// const card = document.getElementById('faceCard1')
+// card.addEventListener('click', flipCard);
+
+// function flipCard(){
+//     card.classList.toggle('flipCard')
+// }
+// console.log(flipCard)
+
+
 
 
 
