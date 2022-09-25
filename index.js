@@ -9,8 +9,6 @@ const computer = {
     currentChoice: null
 }
 
-
-
 // the array that will be shuffled and used to match the choices in the game///
 const choices = ['faceCard1', 'faceCard2', 'faceCard3'];
 
@@ -26,7 +24,7 @@ function shuffleArray(choices) {
     }
     
     for ( let i = 0; i < choices.length; i++) {
-        // used the shuffleArray function to create the face cards and ammend them to the html DOM
+        // used the shuffleArray function to create the face cards and ammend them to the DOM
         if (choices[i] === 'faceCard1')   { 
             const card1 = document.createElement('img')
             card1.src = 'images/faceCard.jpeg'
@@ -63,7 +61,21 @@ function shuffleArray(choices) {
 
 shuffleArray(choices);
 
+// these functions change the image of the card the player clicked
+document.getElementById('faceCard1').addEventListener('click', changeImage)
+function changeImage() {
+    document.getElementById('faceCard1').src='images/bellaJPG.jpeg'
+}
 
+document.getElementById('faceCard2').addEventListener('click', changeImage2)
+function changeImage2() {
+    document.getElementById('faceCard2').src='images/cheppy.JPG'
+}
+
+document.getElementById('faceCard3').addEventListener('click', changeImage3)
+function changeImage3() {
+    document.getElementById('faceCard3').src='images/fisher.jpg'
+}
 
 // this function creates the target event click and checks if it matched the match card. 
 let playerTurn = true
@@ -95,26 +107,16 @@ const matchCheck = (event) => {
    
 }
 
-// these functions change the image of the card the play clicked
-document.getElementById('faceCard1').addEventListener('click', changeImage)
-function changeImage() {
-    document.getElementById('faceCard1').src='images/bellaJPG.jpeg'
-}
 
-document.getElementById('faceCard2').addEventListener('click', changeImage2)
-function changeImage2() {
-    document.getElementById('faceCard2').src='images/cheppy.JPG'
-}
 
-document.getElementById('faceCard3').addEventListener('click', changeImage3)
-function changeImage3() {
-    document.getElementById('faceCard3').src='images/fisher.jpg'
-}
-
+// this is so that the play cannot click on the inmages after the first play
 function removeHandler() {
     document.getElementById('faceCard1').removeEventListener('click', matchCheck);
     document.getElementById('faceCard2').removeEventListener('click', matchCheck);
     document.getElementById('faceCard3').removeEventListener('click', matchCheck);
+    document.getElementById('faceCard1').removeEventListener('click', changeImage);
+    document.getElementById('faceCard2').removeEventListener('click', changeImage2);
+    document.getElementById('faceCard3').removeEventListener('click', changeImage3);
 }
 
 
@@ -155,19 +157,3 @@ document.getElementById('faceCard3').addEventListener('click', matchCheck)
 
 
 
-// //////original click event listeners that were used as models for new event listeners////
-// document.getElementById('faceCard1').addEventListener('click', compareChoices);
-// document.getElementById('faceCard2').addEventListener('click', compareChoices);
-// document.getElementById('faceCard3').addEventListener('click', compareChoices);
-// document.querySelector('.restart-game').addEventListener('click', handleRestartGame);
-
-
-// console.log(getElementsByClassName('cards'))
-// const choice2 = document.createElement('div')
-//     choice2.setAttribute('id', 'fisher') 
-//     document.body.appendChild(choice2);
-//     const fisher = document.createElement('img');
-//     fisher.src = 'images/fisher.jpg';
-//     document.body.appendChild(fisher);
-
-//     choice2.appendChild(fisher)
