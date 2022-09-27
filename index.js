@@ -1,5 +1,5 @@
 // document.addEventListener("DOMContentLoaded", function(event) {
-
+//great comments in your code and it's all super organized!
 // the two players of the game
 const player = {
     currentChoice: null
